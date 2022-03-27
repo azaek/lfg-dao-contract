@@ -1,0 +1,122 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\alokj\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @openzepplin/contracts@4.5.0
+
+PATH: 
+  C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Java\jdk-17.0.2\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\nodejs;C:\maven\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\alokj\.cargo\bin;C:\Users\alokj\AppData\Local\Microsoft\WindowsApps;C:\Users\alokj\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\alokj\AppData\Local\GitHubDesktop\bin;C:\Users\alokj\AppData\Roaming\npm;C:\Users\alokj\AppData\Local\Programs\Microsoft VS Code Insiders\bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.13.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@openzepplin%2fcontracts: Not found
+      at Request.params.callback [as _callback] (C:\Users\alokj\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:67029:18)
+      at Request.self.callback (C:\Users\alokj\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140883:22)
+      at Request.emit (node:events:390:28)
+      at Request.<anonymous> (C:\Users\alokj\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141855:10)
+      at Request.emit (node:events:390:28)
+      at IncomingMessage.<anonymous> (C:\Users\alokj\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141777:12)
+      at Object.onceWrapper (node:events:509:28)
+      at IncomingMessage.emit (node:events:402:35)
+      at endReadableNT (node:internal/streams/readable:1343:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "lens-protocol",
+    "version": "1.0.0",
+    "description": "decentralized social media",
+    "main": "index.js",
+    "scripts": {
+      "test": "npm run compile && TRACK_GAS=true hardhat test",
+      "quick-test": "hardhat test",
+      "spdx": "hardhat prepend-spdx-license",
+      "size": "npm run compile && hardhat size-contracts",
+      "full-deploy-local": "hardhat full-deploy --network localhost",
+      "full-deploy-mumbai": "hardhat full-deploy --network mumbai",
+      "coverage": "npm run compile && hardhat coverage --temp temp-artifacts --testfiles test/emptyrun.coverage.ts && hardhat coverage --temp temp-artifacts --testfiles '!test/emptyrun.coverage.ts'",
+      "run-env": "npm i && tail -f /dev/null",
+      "hardhat": "hardhat",
+      "hardhat:kovan": "hardhat --network kovan",
+      "hardhat:tenderly-main": "hardhat --network tenderlyMain",
+      "hardhat:ropsten": "hardhat --network ropsten",
+      "hardhat:main": "hardhat --network main",
+      "hardhat:docker": "hardhat --network hardhatevm_docker",
+      "hardhat:mumbai": "hardhat --network mumbai",
+      "hardhat:matic": "hardhat --network matic",
+      "compile": "SKIP_LOAD=true hardhat clean && SKIP_LOAD=true hardhat compile",
+      "console:fork": "MAINNET_FORK=true hardhat console",
+      "format": "prettier --write .",
+      "lint": "eslint ."
+    },
+    "repository": {
+      "type": "git",
+      "url": "git@github.com:aave/lens-protocol.git"
+    },
+    "bugs": {
+      "url": "https://github.com/aave/lens-protocol/issues"
+    },
+    "homepage": "",
+    "devDependencies": {
+      "@nomiclabs/hardhat-ethers": "2.0.2",
+      "@nomiclabs/hardhat-etherscan": "2.1.8",
+      "@typechain/ethers-v5": "8.0.5",
+      "@typechain/hardhat": "3.0.0",
+      "@types/chai": "4.2.22",
+      "@types/mocha": "9.0.0",
+      "@types/node": "16.11.11",
+      "@typescript-eslint/eslint-plugin": "5.5.0",
+      "@typescript-eslint/parser": "5.5.0",
+      "chai": "4.3.4",
+      "defender-relay-client": "1.12.1",
+      "dotenv": "10.0.0",
+      "eslint": "8.3.0",
+      "eslint-config-prettier": "8.3.0",
+      "eslint-plugin-prettier": "4.0.0",
+      "ethereum-waffle": "3.4.0",
+      "ethers": "5.5.1",
+      "hardhat": "2.7.0",
+      "hardhat-contract-sizer": "2.1.1",
+      "hardhat-gas-reporter": "1.0.6",
+      "hardhat-log-remover": "2.0.2",
+      "hardhat-spdx-license-identifier": "2.0.3",
+      "husky": "7.0.4",
+      "prettier": "2.5.0",
+      "prettier-plugin-solidity": "1.0.0-beta.19",
+      "solidity-coverage": "0.7.17",
+      "ts-generator": "0.1.1",
+      "ts-node": "10.4.0",
+      "typechain": "6.0.5",
+      "typescript": "4.5.2"
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "pretty-quick --staged --pattern 'contracts/**/*.sol' --pattern 'helpers/**/*.ts'  --pattern 'test/**/*.ts' --pattern 'tasks/**/*.ts'"
+      }
+    },
+    "dependencies": {
+      "@openzeppelin/contracts": "^4.5.0"
+    },
+    "author": "Lens",
+    "contributors": [
+      "Peter Michael (Zer0dot)",
+      "Miguel Martinez",
+      "Lasse Herskind",
+      "Steven Valeri",
+      "Alan Donoso Naumczuk",
+      "Emilio Frangella",
+      "David Racero"
+    ],
+    "license": "AGPL-3.0-only"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

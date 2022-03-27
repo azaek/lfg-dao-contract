@@ -1,0 +1,10 @@
+{
+  "followNFT": "0xc3dd7a5CAC7EbAEa8356da9DE8E04ceFE7E5C075",
+  "member": "0x2fFd013AaA7B5a7DA93336C2251075202b33FB2B",
+  "governance": "0xeAD9C93b79Ae7C1591b1FB5323BD777E86e150d4",
+  "user": "0x92561F28Ec438Ee9831D00D1D59fbDC981b762b2",
+  "profileId": {
+    "type": "BigNumber",
+    "hex": "0x01"
+  }
+}
